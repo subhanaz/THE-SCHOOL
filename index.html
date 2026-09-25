@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Search Engine Optimization -->
+    <title>The School Hyderabad | Premium Education & Admissions</title>
+    <meta name="description" content="The School in Hyderabad offers premium education, world-class facilities, and a future-ready curriculum for holistic child development. Admissions open for 2026-2027.">
+    <meta name="keywords" content="Best School in Hyderabad, Premium Education, Top Schools Saifabad, CBSE Schools Hyderabad, Admission Open 2026, The School Saifabad">
+    <meta name="author" content="The School">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The School Hyderabad | Premium Education">
+    <meta property="og:description" content="Empowering the next generation with a future-ready curriculum and world-class facilities.">
+    <meta property="og:image" content="Logo.png">
+    
+    <link rel="icon" type="image/png" href="Logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+        
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        
+    <style>
+        :root { --accent: #f59e0b; --accent-glow: rgba(245, 158, 11, 0.4); }
+        body { font-family: 'Poppins', sans-serif; overflow-x: hidden; background-color: #F7F8F6; color: #0f172a; }
+        h1, h2, h3, .serif-font { font-family: 'Merriweather', serif; }
+        .anton-font { font-family: 'Anton', sans-serif; }
+
+        .nav-link { position: relative; color: #1e293b; transition: color 0.3s; font-weight: 600; }
+        .nav-link:hover { color: var(--accent); }
+        .nav-link:after { content: ''; position: absolute; width: 0; height: 3px; bottom: -6px; left: 0; background: var(--accent); transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1); border-radius: 2px; }
+        .nav-link:hover:after { width: 100%; }
+
+        .logo-blend { mix-blend-mode: multiply; transition: transform 0.4s ease; }
+        .logo-container:hover .logo-blend { transform: scale(1.05); }
+
+        @keyframes ticker { 0% { transform: translateX(100vw); } 100% { transform: translateX(-100%); } }
+        .animate-marquee { display: inline-flex; animation: ticker 30s linear infinite; white-space: nowrap; }
+        .animate-marquee:hover { animation-play-state: paused; }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(0, 0, 0, 0.05); border-top: 1px solid rgba(255, 255, 255, 0.8); border-left: 1px solid rgba(255, 255, 255, 0.8);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+        }
+
+        /* Floating Notebook Animations */
+        @keyframes float-1 { 0%, 100% { transform: translateY(0px) rotate(-2deg); } 50% { transform: translateY(-15px) rotate(1deg); } }
+        @keyframes float-2 { 0%, 100% { transform: translateY(0px) rotate(2deg); } 50% { transform: translateY(-12px) rotate(-1deg); } }
+        .anim-float-1 { animation: float-1 6s ease-in-out infinite; }
+        .anim-float-2 { animation: float-2 7s ease-in-out infinite; }
+
+        /* Curriculum Accordion */
+        .csm-accordion { display: flex; width: 100%; height: 60vh; min-height: 400px; overflow: hidden; border-radius: 2rem; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 30px 60px -15px rgba(0,0,0,0.1); }
+        .csm-panel { position: relative; flex: 1; transition: flex 0.8s cubic-bezier(0.25, 1, 0.5, 1); cursor: pointer; overflow: hidden; border-right: 1px solid rgba(0,0,0,0.05); }
+        .csm-panel:last-child { border-right: none; }
+        .csm-panel:hover { flex: 6; }
+        .csm-accordion:hover .csm-panel:not(:hover) { filter: brightness(0.6) grayscale(0.5); }
+        .csm-panel-bg { position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform 1s ease; }
+        .csm-panel:hover .csm-panel-bg { transform: scale(1.08); }
+        .csm-overlay { position: absolute; inset: 0; background: linear-gradient(to top, #0f172a 0%, rgba(15,23,42,0.4) 60%, transparent 100%); transition: opacity 0.5s; opacity: 0.8; }
+        .csm-panel:hover .csm-overlay { opacity: 1; background: linear-gradient(to top, #0f172a 0%, rgba(15,23,42,0.6) 50%, transparent 100%); }
+        .csm-content { position: absolute; bottom: 0; left: 0; width: 100%; padding: 2rem; opacity: 0; transform: translateY(30px); transition: all 0.6s ease 0.2s; pointer-events: none; }
+        .csm-panel:hover .csm-content { opacity: 1; transform: translateY(0); pointer-events: auto; }
+        .csm-vertical-title { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%) rotate(180deg); writing-mode: vertical-rl; white-space: nowrap; font-weight: 900; font-size: 1.25rem; color: #ffffff; letter-spacing: 4px; transition: opacity 0.3s ease; }
+        .csm-panel:hover .csm-vertical-title { opacity: 0; }
+
+        .will-change-transform { will-change: transform, opacity; }
+
+        /* 3D Gallery */
+        #cinematic-gallery { background-color: #eedbf0; transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1); touch-action: pan-y; }
+        .cg-scene { position: absolute; width: 100%; height: 100%; perspective: 1500px; overflow: hidden; }
+        .cg-track { position: absolute; left: 50%; top: 58%; width: 0; height: 0; transform-style: preserve-3d; will-change: transform; }
+        .cg-item { position: absolute; top: 50%; left: 50%; width: 24vw; max-width: 320px; aspect-ratio: 4/5; border-radius: 12px; cursor: pointer; transform-origin: 50% 50%; will-change: transform, opacity; }
+        @media (max-width: 768px) { .cg-item { width: 45vw; aspect-ratio: 3/4; } }
+        .cg-img-wrapper { position: absolute; inset: 0; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); transition: box-shadow 0.4s ease; background-color: #ffffff; }
+        .cg-item img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+        .cg-item.is-active .cg-img-wrapper { box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+
+        .testimonial-slide { transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out; }
+        #facility-modal { opacity: 0; pointer-events: none; transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); }
+        #facility-modal.active { opacity: 1; pointer-events: auto; }
+        .modal-bg-slide { position: absolute; inset: 0; background-size: cover; background-position: center; transition: opacity 1.5s ease; transform: scale(1.02); }
+        .typewriter-cursor::after { content: '▌'; animation: blink 1s step-end infinite; color: var(--accent); margin-left: 6px; text-shadow: 0 0 10px var(--accent-glow); }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    </style>
+</head>
+<body class="relative"> 
+
+    <!-- Splash Screen -->
+    <div id="achievements-curtain" class="fixed inset-0 z-[9999] bg-white flex flex-col justify-center items-center transition-transform duration-[1000ms] ease-[cubic-bezier(0.7,0,0.3,1)] cursor-pointer" onclick="removeCurtain()">
+        <img src="Achievements.jpg" alt="10th Grade Achievements" class="w-full h-full" style="object-fit: fill;" onerror="this.style.display='none';">
+        <div class="absolute bottom-6 text-white flex flex-col items-center animate-bounce">
+            <span class="text-xs md:text-sm tracking-[0.2em] uppercase mb-2 font-bold text-amber-500 bg-slate-900 px-6 py-2 rounded-full shadow-lg border border-amber-500/30">Click or Scroll to Enter</span>
+            <i class="fa-solid fa-chevron-down text-2xl text-amber-500 drop-shadow-lg"></i>
+        </div>
+    </div>
+
+    <script>
+        let curtainRemoved = false;
+        function removeCurtain() {
+            if (curtainRemoved) return;
+            curtainRemoved = true;
+            const curtain = document.getElementById('achievements-curtain');
+            if(curtain) {
+                curtain.style.transform = 'translateY(-100%)';
+                document.body.classList.remove('overflow-hidden'); 
+                setTimeout(() => { curtain.remove(); }, 1000); 
+            }
+        }
+        window.addEventListener('scroll', removeCurtain, { once: true, passive: true });
+        window.addEventListener('wheel', removeCurtain, { once: true, passive: true });
+        window.addEventListener('touchstart', removeCurtain, { once: true, passive: true });
+        window.addEventListener('keydown', removeCurtain, { once: true });
+    </script>
+
+    <!-- Top Marquee -->
+    <div class="bg-slate-900 text-slate-100 py-2 text-xs md:text-sm font-medium overflow-hidden flex relative z-50">
+        <div class="animate-marquee">
+            <span class="mx-8 text-amber-400 font-bold">🎓 Admissions Open 2026-27 | Limited Seats for Std 1-5</span>
+            <span class="mx-8"><i class="fa-solid fa-location-dot text-amber-500 mr-2"></i> 6-2-44/1, Saifabad, Hyderabad</span>
+            <span class="mx-8"><i class="fa-solid fa-phone text-amber-500 mr-2"></i> 040-35272407</span>
+            <span class="mx-8"><i class="fa-solid fa-envelope text-amber-500 mr-2"></i> theschool1983@gmail.com</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 transition-all duration-300 h-[80px] md:h-[100px] flex items-center">
+        <div class="max-w-[95rem] mx-auto px-6 w-full flex items-center justify-between">
+            <div class="flex items-center gap-4 md:gap-5 logo-container cursor-pointer">
+                <img src="Logo.png" alt="The School Logo" class="logo-blend h-16 md:h-20 lg:h-24 w-auto object-contain" onerror="this.onerror=null; this.src='https://cdn-icons-png.flaticon.com/512/3228/3228945.png';">
+                <div>
+                    <span class="font-black text-2xl md:text-3xl lg:text-4xl tracking-tight text-slate-900 serif-font mt-1 block">THE SCHOOL</span>
+                </div>
+            </div>
+            <div class="hidden lg:flex items-center gap-10 text-lg">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#curriculum" class="nav-link">Curriculum</a>
+                <a href="#activities" class="nav-link">Activities</a>
+                <a href="#gallery-scroll-section" class="nav-link">Gallery</a>
+                <a href="#fee-structure" class="nav-link">Fees</a>
+            </div>
+            <a href="#admission" class="hidden md:flex bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-full text-base font-bold transition-all items-center gap-2 shadow-md hover:-translate-y-1">
+                <span>Enroll Now</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex flex-col justify-center relative -mt-[80px] md:-mt-[100px]">
+        <div id="heroSlider" class="absolute inset-0"></div>
+        <div class="absolute inset-0 bg-slate-900/60 z-10"></div> 
+        <div id="heroTextContainer" class="relative z-20 max-w-6xl mx-auto px-6 text-center w-full transition-all duration-1000 ease-in-out opacity-100 translate-y-0 py-24">
+            <div class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 px-6 py-2 rounded-full mb-8">
+                <i class="fa-solid fa-star text-amber-400 text-xs"></i>
+                <span class="uppercase tracking-[0.3em] text-xs font-bold text-white">Est. 1983</span>
+                <i class="fa-solid fa-star text-amber-400 text-xs"></i>
+            </div>
+            <h1 id="heroTitle" class="text-6xl md:text-8xl font-black leading-[1.1] mb-8 drop-shadow-lg text-white">
+                Where Learning Feels <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-amber-500">Like Joy</span>
+            </h1>
+            <p id="heroSubtitle" class="text-xl md:text-2xl max-w-3xl mx-auto text-slate-200 font-light mb-12 leading-relaxed">
+                Nurturing young minds with academic excellence, creative arts, and fundamental values to build the visionary leaders of tomorrow.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="#admission" class="bg-amber-500 text-white hover:bg-amber-600 px-10 py-5 rounded-full font-bold text-lg transition-all shadow-lg hover:-translate-y-1">Start Admission Process</a>
+                <a href="#activities" class="bg-white/10 backdrop-blur-md border border-white/30 hover:bg-white hover:text-slate-900 text-white px-10 py-5 rounded-full font-bold text-lg transition-all hover:-translate-y-1">Explore Activities</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 relative z-10">
+        <div class="max-w-[90rem] mx-auto px-6 w-full relative z-10">
+            <div class="glass-card p-10 lg:p-14 rounded-[3rem] shadow-xl flex flex-col bg-white border border-slate-200">
+                <div class="flex flex-col lg:flex-row justify-between gap-12">
+                    <div class="w-full lg:w-7/12 relative flex flex-col items-center lg:items-start text-center lg:text-left">
+                        <div class="absolute -top-12 -left-6 text-[10rem] leading-none text-slate-100 font-serif z-0 select-none hidden lg:block">“</div>
+                        <div class="relative z-10 mt-6 w-full">
+                            <p class="text-slate-600 text-lg md:text-xl leading-[1.9] font-light text-justify">
+                                <span class="font-bold text-slate-900">The School</span> was established in May 1983 with the intention of having an exclusive institution for excelling in Academics, co-curricular activities and overall development of the children and ever since it has grown very rapidly. The aim of the School is not only to make learning pleasurable but also educating the children to become good citizens. To inculcate a high sense of responsibility, duty, integrity and spirit of co-operation. A sound Educational setup strongly recommends positive discipline and personality development in every child. The School strives to provide a nurturing and stimulating environment where every child is encouraged to discover their potential, develop confidence and embrace lifelong learning. The School is run by the founder and the Principal <span class="font-bold text-slate-900">Mrs. Rehana Khan</span> with the help of the School Board of Directors and our efficient Teachers. Our Teachers in addition to imparting Education through prescribed curriculum also cater many innovative Programs in order to inculcate in the young minds the fundamental values of our cultural heritage, we are always in search of new ideas and innovation.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-4/12 flex flex-col items-center lg:mt-6">
+                        <div class="relative w-full max-w-[280px] mb-4 group">
+                            <div class="absolute inset-0 bg-amber-500 translate-x-3 translate-y-3 rounded-2xl z-0 transition-transform group-hover:translate-x-5 group-hover:translate-y-5"></div>
+                            <img src="Principle.png" alt="Principal Mrs. Rehana Khan" loading="lazy" class="relative z-10 w-full aspect-[4/5] object-cover rounded-2xl border-4 border-white shadow-xl transition-transform group-hover:-translate-y-2" onerror="this.onerror=null; this.src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png'; this.style.backgroundColor='#1e293b';">
+                        </div>
+                        <div class="text-center mt-3">
+                            <h3 class="text-xl font-bold text-slate-900 uppercase tracking-widest">Founder & Principal</h3>
+                            <p class="text-amber-600 font-medium mt-1">Mrs. Rehana Khan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center text-center gap-10 mt-16 w-full relative z-10 border-t border-slate-100 pt-16">
+                    <div class="w-full max-w-4xl">
+                        <h4 class="text-2xl md:text-3xl font-black text-slate-800 mb-4 font-serif">Professional Teachers</h4>
+                        <p class="text-slate-500 text-lg leading-relaxed font-light">Our teachers will take care of children's studies during class hours. Guide them for career buildings, and promote extra-curricular activities contribution to the overall development of children.</p>
+                    </div>
+                    <div class="w-full max-w-4xl">
+                        <h4 class="text-2xl md:text-3xl font-black text-slate-800 mb-2 font-serif">Calculating Child Support</h4>
+                        <h4 class="text-2xl md:text-3xl font-black text-slate-800 mb-4 font-serif">& Children's Projects</h4>
+                        <p class="text-slate-500 text-lg leading-relaxed font-light">Every week we enable children to do project work in a real-time environment.</p>
+                    </div>
+                </div>
+
+                <hr class="border-slate-200 mt-16">
+
+                <div class="flex flex-col md:flex-row justify-around items-center text-center divide-y md:divide-y-0 md:divide-x divide-slate-200 pt-8 w-full" id="counter-section">
+                    <div class="p-6 w-full">
+                        <div class="text-6xl md:text-7xl font-black mb-3 text-[#ff794d] anton-font tracking-wide"><span class="counter" data-target="30">0</span>+</div>
+                        <p class="text-slate-600 text-xs tracking-[0.2em] font-bold uppercase">Experienced Teachers</p>
+                    </div>
+                    <div class="p-6 w-full">
+                        <div class="text-6xl md:text-7xl font-black mb-3 text-[#46a0f5] anton-font tracking-wide"><span class="counter" data-target="400">0</span>+</div>
+                        <p class="text-slate-600 text-xs tracking-[0.2em] font-bold uppercase">Happy Students</p>
+                    </div>
+                    <div class="p-6 w-full">
+                        <div class="text-6xl md:text-7xl font-black mb-3 text-[#10b981] anton-font tracking-wide"><span class="counter" data-target="100">0</span>%</div>
+                        <p class="text-slate-600 text-xs tracking-[0.2em] font-bold uppercase">Parents' Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why The School (Floating Notebooks) -->
+    <section class="py-20 md:py-32 bg-[#F7F8F6] relative z-10 border-t border-slate-200 overflow-hidden">
+        <div class="text-center max-w-4xl mx-auto px-6 mb-20 relative z-30">
+            <h2 class="text-5xl md:text-7xl font-black text-slate-800 mb-6 tracking-tight font-serif">Why The School?</h2>
+            <p class="text-slate-600 text-lg leading-relaxed font-light">Our Teachers cater many innovative Programmers in order to inculcate in the young minds the fundamental values of our cultural heritage.</p>
+        </div>
+
+        <div class="w-full max-w-[100rem] mx-auto px-6 relative z-40 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+            
+            <!-- Book 1 -->
+            <div class="relative w-full max-w-[360px] mx-auto transform transition-transform hover:-translate-y-3 cursor-default anim-float-1">
+                <!-- Pen 1 -->
+                <div class="absolute -right-4 top-12 w-[22px] h-[220px] bg-white rounded-full shadow-[4px_4px_10px_rgba(0,0,0,0.15)] z-0 flex flex-col items-center">
+                    <div class="absolute -top-[8px] w-[10px] h-[8px] bg-[#60a5fa] rounded-t-sm"></div>
+                    <div class="absolute top-2 -left-[5px] w-[8px] h-14 bg-[#60a5fa] rounded-sm shadow-sm"></div>
+                    <div class="absolute -bottom-[16px] w-0 h-0 border-l-[11px] border-r-[11px] border-t-[18px] border-l-transparent border-r-transparent border-t-white drop-shadow-md"></div>
+                    <div class="absolute -bottom-[18px] w-[4px] h-[4px] bg-slate-800 rounded-full"></div>
+                </div>
+                <!-- Book Body -->
+                <div class="relative w-full bg-[#bae6fd] rounded-r-2xl rounded-l-md shadow-xl overflow-hidden h-[360px] z-10">
+                    <div class="absolute left-0 top-0 bottom-0 w-8 bg-[#3b82f6]/30 border-r border-[#3b82f6]/40 shadow-[inset_-4px_0_8px_rgba(0,0,0,0.05)] z-10"></div>
+                    <div class="pl-12 pr-6 py-8 flex items-center h-full">
+                        <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 rotate-[-2deg] w-full flex flex-col justify-center min-h-[260px]">
+                            <h3 class="font-black text-2xl text-slate-900 mb-4 tracking-tight">Professional Teachers</h3>
+                            <p class="text-slate-700 text-sm font-medium leading-relaxed">Our teachers will take care of children's studies during class work.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 2 -->
+            <div class="relative w-full max-w-[360px] mx-auto transform transition-transform hover:-translate-y-3 cursor-default mt-8 md:mt-0 anim-float-2">
+                <!-- Pen 2 -->
+                <div class="absolute -right-4 top-16 w-[22px] h-[220px] bg-white rounded-full shadow-[4px_4px_10px_rgba(0,0,0,0.15)] z-0 flex flex-col items-center">
+                    <div class="absolute -top-[8px] w-[10px] h-[8px] bg-[#34d399] rounded-t-sm"></div>
+                    <div class="absolute top-2 -left-[5px] w-[8px] h-14 bg-[#34d399] rounded-sm shadow-sm"></div>
+                    <div class="absolute -bottom-[16px] w-0 h-0 border-l-[11px] border-r-[11px] border-t-[18px] border-l-transparent border-r-transparent border-t-white drop-shadow-md"></div>
+                    <div class="absolute -bottom-[18px] w-[4px] h-[4px] bg-slate-800 rounded-full"></div>
+                </div>
+                <!-- Book Body -->
+                <div class="relative w-full bg-[#bbf7d0] rounded-r-2xl rounded-l-md shadow-xl overflow-hidden h-[360px] z-10">
+                    <div class="absolute left-0 top-0 bottom-0 w-8 bg-[#10b981]/30 border-r border-[#10b981]/40 shadow-[inset_-4px_0_8px_rgba(0,0,0,0.05)] z-10"></div>
+                    <div class="pl-12 pr-6 py-8 flex items-center h-full">
+                        <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 rotate-[3deg] w-full flex flex-col justify-center min-h-[260px]">
+                            <h3 class="font-black text-2xl text-slate-900 mb-4 tracking-tight">Career Counseling</h3>
+                            <p class="text-slate-700 text-sm font-medium leading-relaxed">Will help you to know and understand yourself and the world of work.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 3 -->
+            <div class="relative w-full max-w-[360px] mx-auto transform transition-transform hover:-translate-y-3 cursor-default mt-8 lg:mt-0 anim-float-1" style="animation-delay: 1s;">
+                <!-- Pen 3 -->
+                <div class="absolute -right-4 top-10 w-[22px] h-[220px] bg-white rounded-full shadow-[4px_4px_10px_rgba(0,0,0,0.15)] z-0 flex flex-col items-center">
+                    <div class="absolute -top-[8px] w-[10px] h-[8px] bg-[#f87171] rounded-t-sm"></div>
+                    <div class="absolute top-2 -left-[5px] w-[8px] h-14 bg-[#f87171] rounded-sm shadow-sm"></div>
+                    <div class="absolute -bottom-[16px] w-0 h-0 border-l-[11px] border-r-[11px] border-t-[18px] border-l-transparent border-r-transparent border-t-white drop-shadow-md"></div>
+                    <div class="absolute -bottom-[18px] w-[4px] h-[4px] bg-slate-800 rounded-full"></div>
+                </div>
+                <!-- Book Body -->
+                <div class="relative w-full bg-[#fecaca] rounded-r-2xl rounded-l-md shadow-xl overflow-hidden h-[360px] z-10">
+                    <div class="absolute left-0 top-0 bottom-0 w-8 bg-[#ef4444]/30 border-r border-[#ef4444]/40 shadow-[inset_-4px_0_8px_rgba(0,0,0,0.05)] z-10"></div>
+                    <div class="pl-12 pr-6 py-8 flex items-center h-full">
+                        <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 rotate-[-1deg] w-full flex flex-col justify-center min-h-[260px]">
+                            <h3 class="font-black text-2xl text-slate-900 mb-4 tracking-tight">Calculating Child Support</h3>
+                            <p class="text-slate-700 text-sm font-medium leading-relaxed">We will take special classes for slow learners with dedicated instructors.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 4 -->
+            <div class="relative w-full max-w-[360px] mx-auto transform transition-transform hover:-translate-y-3 cursor-default mt-8 lg:mt-0 anim-float-2" style="animation-delay: 1.5s;">
+                <!-- Pen 4 -->
+                <div class="absolute -right-4 top-20 w-[22px] h-[220px] bg-white rounded-full shadow-[4px_4px_10px_rgba(0,0,0,0.15)] z-0 flex flex-col items-center">
+                    <div class="absolute -top-[8px] w-[10px] h-[8px] bg-[#facc15] rounded-t-sm"></div>
+                    <div class="absolute top-2 -left-[5px] w-[8px] h-14 bg-[#facc15] rounded-sm shadow-sm"></div>
+                    <div class="absolute -bottom-[16px] w-0 h-0 border-l-[11px] border-r-[11px] border-t-[18px] border-l-transparent border-r-transparent border-t-white drop-shadow-md"></div>
+                    <div class="absolute -bottom-[18px] w-[4px] h-[4px] bg-slate-800 rounded-full"></div>
+                </div>
+                <!-- Book Body -->
+                <div class="relative w-full bg-[#fef08a] rounded-r-2xl rounded-l-md shadow-xl overflow-hidden h-[360px] z-10">
+                    <div class="absolute left-0 top-0 bottom-0 w-8 bg-[#eab308]/30 border-r border-[#eab308]/40 shadow-[inset_-4px_0_8px_rgba(0,0,0,0.05)] z-10"></div>
+                    <div class="pl-12 pr-6 py-8 flex items-center h-full">
+                        <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 rotate-[2deg] w-full flex flex-col justify-center min-h-[260px]">
+                            <h3 class="font-black text-2xl text-slate-900 mb-4 tracking-tight">Children's Projects</h3>
+                            <p class="text-slate-700 text-sm font-medium leading-relaxed">Every week we provide project work for children for a real-time environment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Curriculum Section -->
+    <section id="curriculum" class="pt-10 pb-24 relative z-10 bg-[#F7F8F6]">
+        <div class="max-w-[100rem] mx-auto w-full relative z-10 px-6">
+            <div class="text-center mb-16 relative">
+                <span class="text-amber-500 font-bold tracking-[0.3em] uppercase text-sm">Beyond Textbooks</span>
+                <h2 class="text-5xl md:text-6xl font-black text-slate-900 mb-4 mt-2">Future-Ready Curriculum</h2>
+                <p class="text-slate-500 max-w-3xl mx-auto text-lg font-light">Hover to explore our academic pillars and dynamic learning environments.</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row w-full h-[80vh] md:h-[65vh] min-h-[500px] overflow-hidden rounded-[2rem] shadow-2xl border border-slate-200 bg-slate-900 group/accordion">
+                <div class="relative flex-1 md:hover:flex-[3] lg:hover:flex-[4] transition-all duration-700 ease-in-out cursor-pointer overflow-hidden border-b md:border-b-0 md:border-r border-white/20 group/panel" onclick="openFacilityModal('computerScience')">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover/panel:scale-110 opacity-50 group-hover/panel:opacity-100" style="background-image: url('Cir1.png');"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent opacity-90 group-hover/panel:opacity-70 transition-opacity duration-500"></div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-100 group-hover/panel:opacity-0 transition-opacity duration-300 pointer-events-none p-4">
+                        <h3 class="text-white font-black text-2xl md:text-3xl tracking-[0.2em] md:tracking-[0.3em] uppercase whitespace-nowrap md:[writing-mode:vertical-rl] md:rotate-180 drop-shadow-xl text-center">Computer Science</h3>
+                    </div>
+                    <div class="absolute inset-0 p-6 md:p-12 flex flex-col justify-end opacity-0 group-hover/panel:opacity-100 translate-y-10 group-hover/panel:translate-y-0 transition-all duration-500 pointer-events-none">
+                        <i class="fa-solid fa-laptop-code text-5xl md:text-6xl text-amber-400 mb-6 drop-shadow-md"></i>
+                        <h3 class="text-3xl md:text-5xl font-black text-white mb-4 drop-shadow-md leading-tight">Computer Science</h3>
+                        <p class="text-slate-200 text-base md:text-lg leading-relaxed drop-shadow-md">Dive deep into coding, artificial intelligence, and computational logic.</p>
+                    </div>
+                </div>
+
+                <div class="relative flex-1 md:hover:flex-[3] lg:hover:flex-[4] transition-all duration-700 ease-in-out cursor-pointer overflow-hidden border-b md:border-b-0 md:border-r border-white/20 group/panel" onclick="openFacilityModal('library')">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover/panel:scale-110 opacity-50 group-hover/panel:opacity-100" style="background-image: url('Cir2.png');"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent opacity-90 group-hover/panel:opacity-70 transition-opacity duration-500"></div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-100 group-hover/panel:opacity-0 transition-opacity duration-300 pointer-events-none p-4">
+                        <h3 class="text-white font-black text-2xl md:text-3xl tracking-[0.2em] md:tracking-[0.3em] uppercase whitespace-nowrap md:[writing-mode:vertical-rl] md:rotate-180 drop-shadow-xl text-center">Library</h3>
+                    </div>
+                    <div class="absolute inset-0 p-6 md:p-12 flex flex-col justify-end opacity-0 group-hover/panel:opacity-100 translate-y-10 group-hover/panel:translate-y-0 transition-all duration-500 pointer-events-none">
+                        <i class="fa-solid fa-book-open text-5xl md:text-6xl text-amber-400 mb-6 drop-shadow-md"></i>
+                        <h3 class="text-3xl md:text-5xl font-black text-white mb-4 drop-shadow-md leading-tight">Library</h3>
+                        <p class="text-slate-200 text-base md:text-lg leading-relaxed drop-shadow-md">A vast collection of resources and interactive digital archives.</p>
+                    </div>
+                </div>
+
+                <div class="relative flex-1 md:hover:flex-[3] lg:hover:flex-[4] transition-all duration-700 ease-in-out cursor-pointer overflow-hidden border-b md:border-b-0 md:border-r border-white/20 group/panel" onclick="openFacilityModal('laboratory')">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover/panel:scale-110 opacity-50 group-hover/panel:opacity-100" style="background-image: url('Cir3.png');"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent opacity-90 group-hover/panel:opacity-70 transition-opacity duration-500"></div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-100 group-hover/panel:opacity-0 transition-opacity duration-300 pointer-events-none p-4">
+                        <h3 class="text-white font-black text-2xl md:text-3xl tracking-[0.2em] md:tracking-[0.3em] uppercase whitespace-nowrap md:[writing-mode:vertical-rl] md:rotate-180 drop-shadow-xl text-center">Laboratory</h3>
+                    </div>
+                    <div class="absolute inset-0 p-6 md:p-12 flex flex-col justify-end opacity-0 group-hover/panel:opacity-100 translate-y-10 group-hover/panel:translate-y-0 transition-all duration-500 pointer-events-none">
+                        <i class="fa-solid fa-flask text-5xl md:text-6xl text-amber-400 mb-6 drop-shadow-md"></i>
+                        <h3 class="text-3xl md:text-5xl font-black text-white mb-4 drop-shadow-md leading-tight">Laboratory</h3>
+                        <p class="text-slate-200 text-base md:text-lg leading-relaxed drop-shadow-md">Hands-on scientific exploration and advanced research facilities.</p>
+                    </div>
+                </div>
+
+                <div class="relative flex-1 md:hover:flex-[3] lg:hover:flex-[4] transition-all duration-700 ease-in-out cursor-pointer overflow-hidden group/panel" onclick="openFacilityModal('cultural')">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover/panel:scale-110 opacity-50 group-hover/panel:opacity-100" style="background-image: url('Cir4.png');"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent opacity-90 group-hover/panel:opacity-70 transition-opacity duration-500"></div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-100 group-hover/panel:opacity-0 transition-opacity duration-300 pointer-events-none p-4">
+                        <h3 class="text-white font-black text-2xl md:text-3xl tracking-[0.2em] md:tracking-[0.3em] uppercase whitespace-nowrap md:[writing-mode:vertical-rl] md:rotate-180 drop-shadow-xl text-center">Cultural Programme</h3>
+                    </div>
+                    <div class="absolute inset-0 p-6 md:p-12 flex flex-col justify-end opacity-0 group-hover/panel:opacity-100 translate-y-10 group-hover/panel:translate-y-0 transition-all duration-500 pointer-events-none">
+                        <i class="fa-solid fa-masks-theater text-5xl md:text-6xl text-amber-400 mb-6 drop-shadow-md"></i>
+                        <h3 class="text-3xl md:text-5xl font-black text-white mb-4 drop-shadow-md leading-tight">Cultural Programme</h3>
+                        <p class="text-slate-200 text-base md:text-lg leading-relaxed drop-shadow-md">Empowering expression through arts, drama, dance, and music.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="w-full bg-white relative z-10 border-t border-slate-200">
+        <div class="py-24 max-w-[100rem] mx-auto px-6 text-center relative z-0">
+            <span class="text-amber-500 font-bold tracking-[0.3em] uppercase text-sm">Activities & Events</span>
+            <h2 class="text-5xl md:text-7xl font-black text-slate-900 mt-4 uppercase tracking-tight">Extra Curricular Activities</h2>
+            <p class="text-slate-600 max-w-3xl mx-auto text-xl font-medium mt-6 leading-relaxed">Our School develops latest talents among the students. Each student is expected to join in any one of the following activities.</p>
+        </div>
+
+        <div class="w-full relative pb-32">
+            <div class="sticky top-[80px] md:top-[100px] w-full h-[65vh] md:h-[75vh] flex flex-col md:flex-row bg-[#f8f9fa] shadow-[0_-15px_40px_rgba(0,0,0,0.08)] border-t border-slate-200 z-10 cursor-pointer" onclick="openFacilityModal('painting')">
+                <div class="w-full md:w-1/2 lg:w-[60%] h-full relative overflow-hidden group">
+                    <img src="Fac1.png" loading="lazy" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105" alt="Painting" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=1000&auto=format&fit=crop';">
+                </div>
+                <div class="w-full md:w-1/2 lg:w-[40%] p-8 md:p-16 lg:p-24 flex flex-col justify-center h-full">
+                    <h3 class="text-4xl md:text-5xl font-black text-slate-900 mb-8 md:mb-10 tracking-tight">Painting</h3>
+                    <div class="flex justify-between items-center py-4 md:py-5 border-t border-slate-900/10 text-base md:text-lg">
+                        <span class="text-slate-500 font-medium">Category:</span>
+                        <span class="font-bold text-slate-900">Visual Arts</span>
+                    </div>
+                    <div class="flex justify-between items-center py-4 md:py-5 border-t border-slate-900/10 text-base md:text-lg">
+                        <span class="text-slate-500 font-medium">Focus:</span>
+                        <span class="font-bold text-slate-900">Creativity</span>
+                    </div>
+                    <div class="flex justify-between items-center py-4 md:py-5 border-t border-slate-900/10 text-base md:text-lg">
+                        <span class="text-slate-500 font-medium">Availability:</span>
+                        <span class="font-bold text-slate-900">All Grades</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sticky top-[80px] md:top-[100px] w-full h-[65vh] md:h-[75vh] flex flex-col md:flex-row bg-[#f8f9fa] shadow-[0_-15px_40px_rgba(0,0,0,0.08)] border-t border-slate-200 z-20 cursor-pointer" onclick="openFacilityModal('martialArts')">
+                <div class="w-full md:w-1/2 lg:w-[60%] h-full relative overflow-hidden group">
+                    <img src="Fac2.png" loading="lazy" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105" alt="Martial Arts" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555597673-b21d5c935865?q=80&w=1000&auto=format&fit=crop';">
+                </div>
+                <div class="w-full md:w-1/2 lg:w-[40%] p-8 md:p-16 lg:p-24 flex flex-col justify-center h-full">
+                    <h3 class="text-4xl md:text-5xl font-black text-slate-900 mb-8 md:mb-10 tracking-tight">Martial Arts</h3>
+                    <div class="flex justify-between items-center py-4 md:py-5 border-t border-slate-900/10 text-base md:text-lg">
+                        <span class="text-slate-500 font-medium">Category:</span>
+                        <span class="font-bold text-slate-900">Physical Ed</span>
+                    </div>
+                    <div class="flex justify-between items-center py-4 md:py-5 border-t border-slate-900/10 text-base md:text-lg">
+                        <span class="text-slate-500 font-medium">Focus:</span>
+                        <span class="font-bold text-slate-900">Discipline</span>
+                    </div>
+                    <div class="flex justify-between items-center py-4 md:py-5 border-t border-slate-900/10 text-base md:text-lg">
+                        <span class="text-slate-500 font-medium">Availability:</span>
+                        <span class="font-bold text-slate-900">Classes I to X</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sticky top-[80px] md:top-[100px] w-full h-[65vh] md:h-[75vh] flex flex-col md:flex-row bg-[#f8f9fa] shadow-[0_-15px_40px_rgba(0,0,0,0.08)] border-t border-slate-200 z-30 cursor-pointer" onclick="openFacilityModal('volleyball')">
+                <div class="w-full md:w-1/2 lg:w-[60%] h-full relative overflow-hidden group">
+                    <img src="Fac3.png" loading="lazy" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105" alt="Volley Ball" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?q=80&w=1000&auto=format&fit=crop';">
+                </div>
+                <div class="w-full md:w-1/2 lg:w-[40%] p-8 md:p-16 lg:p-24 flex flex-col justify-center h-full">
+                    <h3 class="text-4xl md:text-5xl font-black text-slate-900 mb-8 md:mb-10 tracking-tight">Volley Ball</h3>
+                    <div class="flex justify-between items-center py-4 md:py-5 border-t border-slate-900/10 text-base md:text-lg">
+                        <span class="text-slate-500 font-medium">Category:</span>
+                        <span class="font-bold text-slate-900">Sports</span>
+                    </div>
+                    <div class="flex justify-between items-center py-4 md:py-5 border-t border-slate-900/10 text-base md:text-lg">
+                        <span class="text-slate-500 font-medium">Focus:</span>
+                        <span class="font-bold text-slate-900">Teamwork</span>
+                    </div>
+                    <div class="flex justify-between items-center py-4 md:py-5 border-t border-slate-900/10 text-base md:text-lg">
+                        <span class="text-slate-500 font-medium">Availability:</span>
+                        <span class="font-bold text-slate-900">Classes I to X</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sticky top-[80px] md:top-[100px] w-full h-[65vh] md:h-[75vh] flex flex-col md:flex-row bg-[#f8f9fa] shadow-[0_-15px_40px_rgba(0,0,0,0.08)] border-t border-slate-200 z-[40] cursor-pointer" onclick="openFacilityModal('mehandi')">
+                <div class="w-full md:w-1/2 lg:w-[60%] h-full relative overflow-hidden group">
+                    <img src="Fac4.png" loading="lazy" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105" alt="Mehandi Design" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1560943961-0498305c48b2?q=80&w=1000&auto=format&fit=crop';">
+                </div>
+                <div class="w-full md:w-1/2 lg:w-[40%] p-8 md:p-16 lg:p-24 flex flex-col justify-center h-full">
+                    <h3 class="text-4xl md:text-5xl font-black text-slate-900 mb-8 md:mb-10 tracking-tight">Mehandi Design</h3>
+                    <div class="flex justify-between items-center py-4 md:py-5 border-t border-slate-900/10 text-base md:text-lg">
+                        <span class="text-slate-500 font-medium">Category:</span>
+                        <span class="font-bold text-slate-900">Cultural Arts</span>
+                    </div>
+                    <div class="flex justify-between items-center py-4 md:py-5 border-t border-slate-900/10 text-base md:text-lg">
+                        <span class="text-slate-500 font-medium">Focus:</span>
+                        <span class="font-bold text-slate-900">Tradition</span>
+                    </div>
+                    <div class="flex justify-between items-center py-4 md:py-5 border-t border-slate-900/10 text-base md:text-lg">
+                        <span class="text-slate-500 font-medium">Availability:</span>
+                        <span class="font-bold text-slate-900">Classes I to X</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sticky top-[80px] md:top-[100px] w-full h-[65vh] md:h-[75vh] flex flex-col md:flex-row bg-[#f8f9fa] shadow-[0_-15px_40px_rgba(0,0,0,0.08)] border-t border-slate-200 z-[50] cursor-pointer" onclick="openFacilityModal('indoorGames')">
+                <div class="w-full md:w-1/2 lg:w-[60%] h-full relative overflow-hidden group">
+                    <img src="Fac5.png" loading="lazy" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105" alt="Indoor Games" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1528818817290-7612f0088924?q=80&w=1000&auto=format&fit=crop';">
+                </div>
+                <div class="w-full md:w-1/2 lg:w-[40%] p-8 md:p-16 lg:p-24 flex flex-col justify-center h-full">
+                    <h3 class="text-4xl md:text-5xl font-black text-slate-900 mb-8 md:mb-10 tracking-tight">Indoor Games</h3>
+                    <div class="flex justify-between items-center py-4 md:py-5 border-t border-slate-900/10 text-base md:text-lg">
+                        <span class="text-slate-500 font-medium">Category:</span>
+                        <span class="font-bold text-slate-900">Recreation</span>
+                    </div>
+                    <div class="flex justify-between items-center py-4 md:py-5 border-t border-slate-900/10 text-base md:text-lg">
+                        <span class="text-slate-500 font-medium">Focus:</span>
+                        <span class="font-bold text-slate-900">Strategy</span>
+                    </div>
+                    <div class="flex justify-between items-center py-4 md:py-5 border-t border-slate-900/10 text-base md:text-lg">
+                        <span class="text-slate-500 font-medium">Availability:</span>
+                        <span class="font-bold text-slate-900">All Grades</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cinematic Gallery -->
+    <section id="gallery-scroll-section" style="height: 300vh;" class="relative w-full bg-[#3c1b13]">
+        <div class="sticky top-0 w-full h-screen overflow-hidden flex flex-col justify-start pt-16">
+            <div id="gal-heading" class="w-full text-center shrink-0 z-40 px-6 transition-opacity duration-300">
+                <span class="text-amber-500 font-bold tracking-[0.3em] uppercase text-sm drop-shadow-md">School Albums</span>
+                <h2 class="text-5xl md:text-6xl font-black text-[#f8f5ee] mt-3 tracking-wide serif-font">Moments That Matter</h2>
+                <p class="text-[#d4c9b8] mt-3 font-light text-lg">Scroll to explore. Keep scrolling to open the interactive gallery.</p>
+            </div>
+            <div class="w-full max-w-6xl mx-auto flex justify-center items-start gap-4 md:gap-6 px-4 md:px-0 z-20 mt-12 md:mt-20 shrink-0 h-[65vh]">
+                <div id="scroll-img-left" class="w-[30vw] h-[65vh] md:w-[25vw] md:h-[70vh] bg-slate-900 will-change-transform flex-shrink-0 shadow-2xl">
+                    <img src="Img1.png" loading="lazy" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800&auto=format&fit=crop';">
+                </div>
+                <div id="scroll-img-mid" class="w-[35vw] h-[55vh] md:w-[28vw] md:h-[60vh] bg-slate-900 will-change-transform z-30 flex-shrink-0 mt-8 md:mt-12 shadow-2xl" style="transform-origin: center center;">
+                    <img src="Img2.png" loading="lazy" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=800&auto=format&fit=crop';">
+                </div>
+                <div id="scroll-img-right" class="w-[30vw] h-[45vh] md:w-[25vw] md:h-[50vh] bg-slate-900 will-change-transform flex-shrink-0 mt-16 md:mt-24 shadow-2xl">
+                    <img src="Img3.png" loading="lazy" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800&auto=format&fit=crop';">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- View All Button -->
+    <section class="py-20 bg-[#3c1b13] relative z-30 flex justify-center border-b border-white/10">
+        <button onclick="openCinematicGallery()" class="bg-[#f8f5ee] text-[#3c1b13] px-12 py-5 rounded-full hover:bg-amber-500 hover:text-white transition-all duration-300 font-bold tracking-widest text-sm uppercase flex items-center gap-4 shadow-xl hover:shadow-[0_10px_30px_rgba(245,158,11,0.4)] border border-transparent hover:border-amber-400">
+            View All Images <i class="fa-solid fa-arrow-right"></i>
+        </button>
+    </section>
+
+    <!-- Parents Review -->
+    <section id="reviews" class="py-32 relative z-20 overflow-hidden bg-[#0f172a]">
+        <div class="max-w-[85rem] mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-amber-500 font-bold tracking-[0.3em] uppercase text-sm">Testimonials</span>
+                <h2 class="text-5xl md:text-6xl font-black text-white mt-2 mb-4">Parents Review</h2>
+            </div>
+            <div class="relative w-full h-[400px] md:h-[300px]" id="testimonial-slider-container"></div>
+            <div class="flex justify-center gap-3 mt-12" id="testimonial-dots-container"></div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-slate-200" style="clip-path: polygon(0 100%, 100% 100%, 100% 0);"></div>
+    </section>
+
+    <!-- Feedback Form -->
+    <section id="feedback" class="py-24 relative z-10 bg-slate-200 overflow-hidden border-t border-slate-300 shadow-inner">
+        <div class="max-w-[60rem] mx-auto px-6 relative z-10 w-full">
+            <div class="glass-card p-10 lg:p-14 rounded-[3rem] shadow-2xl bg-white border border-slate-200 text-center">
+                <h2 class="text-4xl font-black text-slate-900 mb-2">Parent's Feedback</h2>
+                <p class="text-slate-600 mb-8 text-base font-light">We value your thoughts and suggestions to help us improve.</p>
+                <form action="https://formspree.io/f/mdekdzqd" method="POST" id="feedbackForm" class="space-y-6 text-left">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <input type="text" name="name" required pattern="[a-zA-Z\s]+" title="Please enter a valid name (letters only)." placeholder="Parent Full Name" class="w-full bg-slate-50 border border-slate-300 rounded-2xl px-6 py-4 text-slate-900 placeholder-slate-500 focus:outline-none focus:border-amber-500 focus:bg-white transition-all shadow-sm">
+                        <input type="tel" name="phone" required pattern="[0-9]{10}" title="Please enter a valid 10-digit mobile number." placeholder="Mobile Number (10 digits)" class="w-full bg-slate-50 border border-slate-300 rounded-2xl px-6 py-4 text-slate-900 placeholder-slate-500 focus:outline-none focus:border-amber-500 focus:bg-white transition-all shadow-sm">
+                    </div>
+                    <input type="text" name="student_info" placeholder="Student Name & Class (Optional)" class="w-full bg-slate-50 border border-slate-300 rounded-2xl px-6 py-4 text-slate-900 placeholder-slate-500 focus:outline-none focus:border-amber-500 focus:bg-white transition-all shadow-sm">
+                    <textarea name="feedback" required placeholder="Please share your feedback or suggestions..." rows="4" class="w-full bg-slate-50 border border-slate-300 rounded-2xl px-6 py-4 text-slate-900 placeholder-slate-500 focus:outline-none focus:border-amber-500 focus:bg-white transition-all shadow-sm"></textarea>
+                    
+                    <button type="submit" id="submitBtn" class="w-full md:w-auto px-12 bg-amber-500 hover:bg-amber-600 text-white py-4 rounded-2xl text-lg font-bold transition-all shadow-[0_0_20px_rgba(245,158,11,0.3)] hover:-translate-y-1 mx-auto flex items-center justify-center gap-3">
+                        <span id="submitText">Submit Feedback</span>
+                        <i id="submitIcon" class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fee Structure -->
+    <section id="fee-structure" class="py-24 relative z-10 bg-white border-t border-slate-200">
+        <div class="max-w-[70rem] mx-auto px-6 relative z-10 w-full">
+            <div class="text-center mb-16">
+                <span class="text-green-600 font-bold tracking-[0.3em] uppercase text-sm">Admissions 2026-2027</span>
+                <h2 class="text-4xl md:text-5xl font-black text-slate-900 mt-2 uppercase tracking-wide">Fee Structure</h2>
+            </div>
+            
+            <div class="glass-card p-10 lg:p-14 rounded-[3rem] shadow-xl bg-slate-50 border border-slate-200 relative overflow-hidden">
+                <div class="space-y-6">
+                    <div class="flex justify-between items-center py-4 border-b border-slate-300/50">
+                        <span class="text-lg md:text-xl font-bold text-slate-800 tracking-wide">NURSERY to III Std</span>
+                        <span class="text-lg md:text-xl font-black text-amber-600">2400/- <span class="text-sm font-medium text-slate-500">Per Month</span></span>
+                    </div>
+                    <div class="flex justify-between items-center py-4 border-b border-slate-300/50">
+                        <span class="text-lg md:text-xl font-bold text-slate-800 tracking-wide">IV Std & V Std</span>
+                        <span class="text-lg md:text-xl font-black text-amber-600">2500/- <span class="text-sm font-medium text-slate-500">Per Month</span></span>
+                    </div>
+                    <div class="flex justify-between items-center py-4 border-b border-slate-300/50">
+                        <span class="text-lg md:text-xl font-bold text-slate-800 tracking-wide">VI Std & VII Std</span>
+                        <span class="text-lg md:text-xl font-black text-amber-600">2600/- <span class="text-sm font-medium text-slate-500">Per Month</span></span>
+                    </div>
+                    <div class="flex justify-between items-center py-4 border-b border-slate-300/50">
+                        <span class="text-lg md:text-xl font-bold text-slate-800 tracking-wide">VIII Std</span>
+                        <span class="text-lg md:text-xl font-black text-amber-600">2800/- <span class="text-sm font-medium text-slate-500">Per Month</span></span>
+                    </div>
+                    <div class="flex justify-between items-center py-4 border-b border-slate-300/50">
+                        <span class="text-lg md:text-xl font-bold text-slate-800 tracking-wide">IX Std & X Std</span>
+                        <span class="text-lg md:text-xl font-black text-amber-600">3200/- <span class="text-sm font-medium text-slate-500">Per Month</span></span>
+                    </div>
+                </div>
+                <div class="mt-10 bg-green-50 rounded-2xl p-6 border border-green-200 text-center">
+                    <p class="text-green-800 font-bold text-lg"><i class="fa-solid fa-circle-info mr-2"></i> Term Fee: 1200/- Per Term <span class="font-normal">(3 Terms in a year)</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Admission Footer -->
+    <footer id="contact" class="bg-[#dcfce7] pt-16 relative w-full border-t border-green-200">
+        
+        <!-- Admission Form -->
+        <div id="admission" class="max-w-[60rem] mx-auto px-6 relative z-20 mb-24 pt-8">
+            <div class="bg-white p-10 md:p-14 rounded-[3rem] shadow-2xl border-2 border-green-200 text-center relative overflow-hidden">
+                <div class="absolute -top-20 -right-20 w-64 h-64 bg-green-100 rounded-full blur-[60px] pointer-events-none"></div>
+                <div class="relative z-10">
+                    <span class="text-green-600 font-bold tracking-[0.2em] uppercase text-sm">Join Our Legacy</span>
+                    <h2 class="text-4xl md:text-5xl font-black text-slate-800 mb-2 mt-2 tracking-tight">Start Admission Process</h2>
+                    <p class="text-slate-500 mb-10 text-base font-light">Fill out the application below and our admissions team will contact you shortly.</p>
+                    
+                    <form action="https://formspree.io/f/mdekdzqd" method="POST" id="admissionForm" class="space-y-6 text-left">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <input type="text" name="student_name" required pattern="[a-zA-Z\s]+" title="Please enter a valid name (letters only)." placeholder="Student's Full Name" class="w-full bg-slate-50 border border-slate-300 rounded-2xl px-6 py-4 text-slate-900 placeholder-slate-500 focus:outline-none focus:border-green-500 focus:bg-white transition-all shadow-sm">
+                            <input type="text" name="parent_name" required pattern="[a-zA-Z\s]+" title="Please enter a valid name (letters only)." placeholder="Parent's Full Name" class="w-full bg-slate-50 border border-slate-300 rounded-2xl px-6 py-4 text-slate-900 placeholder-slate-500 focus:outline-none focus:border-green-500 focus:bg-white transition-all shadow-sm">
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="relative">
+                                <select name="class_applying_for" required class="w-full bg-slate-50 border border-slate-300 rounded-2xl px-6 py-4 text-slate-900 focus:outline-none focus:border-green-500 focus:bg-white transition-all shadow-sm appearance-none cursor-pointer">
+                                    <option value="" disabled selected hidden>Select Class</option>
+                                    <option value="Pre-Primary">Pre-Primary (Nursery)</option>
+                                    <option value="Class I">Class I</option>
+                                    <option value="Class II">Class II</option>
+                                    <option value="Class III">Class III</option>
+                                    <option value="Class IV">Class IV</option>
+                                    <option value="Class V">Class V</option>
+                                    <option value="Class VI">Class VI</option>
+                                    <option value="Class VII">Class VII</option>
+                                    <option value="Class VIII">Class VIII</option>
+                                    <option value="Class IX">Class IX</option>
+                                    <option value="Class X">Class X</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down absolute right-6 top-1/2 transform -translate-y-1/2 text-slate-400 pointer-events-none"></i>
+                            </div>
+                            <input type="tel" name="phone" required pattern="[0-9]{10}" title="Please enter a valid 10-digit mobile number." placeholder="Mobile Number (10 digits)" class="w-full bg-slate-50 border border-slate-300 rounded-2xl px-6 py-4 text-slate-900 placeholder-slate-500 focus:outline-none focus:border-green-500 focus:bg-white transition-all shadow-sm">
+                        </div>
+                        
+                        <input type="email" name="email" required placeholder="Email Address" class="w-full bg-slate-50 border border-slate-300 rounded-2xl px-6 py-4 text-slate-900 placeholder-slate-500 focus:outline-none focus:border-green-500 focus:bg-white transition-all shadow-sm">
+                        
+                        <button type="submit" id="admSubmitBtn" class="w-full md:w-auto px-12 bg-green-600 hover:bg-green-700 text-white py-4 rounded-2xl text-lg font-bold transition-all shadow-[0_0_20px_rgba(22,163,74,0.3)] hover:-translate-y-1 mx-auto flex items-center justify-center gap-3 mt-4">
+                            <span id="admSubmitText">Submit Application</span>
+                            <i id="admSubmitIcon" class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-[95rem] mx-auto px-6 text-center mb-12 relative z-20">
+            <h2 class="text-4xl md:text-5xl font-black text-slate-800 tracking-widest serif-font">THE SCHOOL</h2>
+        </div>
+        
+        <div class="max-w-[90rem] mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-slate-800 mb-12 relative z-20">
+            <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                <h4 class="font-bold text-lg mb-5 uppercase tracking-widest text-slate-900">Location</h4>
+                <div class="w-full h-48 bg-slate-900 rounded-lg overflow-hidden shadow-lg border-2 border-slate-300 relative group">
+                    <a href="https://maps.app.goo.gl/VVRyAf42onhfQWbT6" target="_blank" rel="noopener noreferrer" class="absolute inset-0 z-20 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="bg-white text-slate-900 font-bold px-6 py-2 rounded-full shadow-lg flex items-center gap-2"><i class="fa-solid fa-map-location-dot"></i> Open in Maps</span>
+                    </a>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.394602283949!2d78.4608361!3d17.4042858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb975ec823158f%3A0x6b87661b6b47c0b0!2sSaifabad%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0; filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(85%);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                <h4 class="font-bold text-lg mb-5 uppercase tracking-widest text-slate-900">Contact Us</h4>
+                <div class="space-y-4 text-sm font-medium leading-relaxed text-slate-700">
+                    <p class="hover:text-green-700 transition-colors"># 6-2-44/1, Saifabad Hyderabad, 500004 Telangana</p>
+                    <p class="flex items-center gap-3 justify-center md:justify-start hover:text-green-700 transition-colors"><i class="fa-solid fa-phone text-green-600"></i>040-35272407, 9849322139</p>
+                    <p class="flex items-center gap-3 justify-center md:justify-start hover:text-green-700 transition-colors"><i class="fa-solid fa-envelope text-green-600"></i>theschool1983@gmail.com</p>
+                </div>
+<div class="mt-8 flex items-center justify-center md:justify-start gap-4">
+    <a href="https://www.instagram.com/the_school_official1" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-white border-2 border-green-200 flex items-center justify-center text-green-600 hover:bg-amber-500 hover:border-amber-500 hover:text-white transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1">
+        <i class="fa-brands fa-instagram text-2xl"></i>
+    </a>
+    <a href="https://www.instagram.com/theschool1983" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-white border-2 border-green-200 flex items-center justify-center text-green-600 hover:bg-amber-500 hover:border-amber-500 hover:text-white transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1">
+        <i class="fa-brands fa-instagram text-2xl"></i>
+    </a>
+</div>
+            </div>
+            <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                <h4 class="font-bold text-lg mb-5 uppercase tracking-widest text-slate-900">Opening Hours</h4>
+                <div class="space-y-3 text-sm font-medium leading-relaxed text-slate-700">
+                    <p class="underline decoration-green-400 underline-offset-4 hover:decoration-green-600 transition-colors cursor-default">Pre-Primary :: 8:50 a.m. to 12:30 p.m.</p>
+                    <p class="underline decoration-green-400 underline-offset-4 hover:decoration-green-600 transition-colors cursor-default">Classes I to X :: 8:50 a.m. to 3:15 p.m.</p>
+                    <p class="underline decoration-green-400 underline-offset-4 hover:decoration-green-600 transition-colors cursor-default">Saturday :: 8:50 a.m. to 12:30 p.m.</p>
+                    <p class="underline decoration-green-400 underline-offset-4 hover:decoration-green-600 transition-colors cursor-default">Sunday: Closed</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full relative -mb-1 z-10 opacity-90">
+            <img src="Footer-Drawing.png" alt="School Footer Illustration" loading="lazy" class="w-full h-auto object-cover object-bottom border-b border-green-300" onerror="this.style.display='none';">
+        </div>
+
+        <div class="bg-[#bbf7d0] py-6 text-center text-sm text-slate-700 relative z-20 border-t border-green-300">
+            <p class="font-medium mb-1">Copyright 2026 © TheSchool All Rights Reserved.</p>
+            <p>Designed & Developed by <a href="https://iraglobalsolutions.in" target="_blank" rel="noopener noreferrer" class="text-green-800 hover:text-green-900 hover:underline font-bold transition-colors">iraglobalsolutions.in</a></p>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- MODALS AND OVERLAYS                        -->
+    <!-- ========================================== -->
+
+    <!-- DYNAMIC SUCCESS POPUP MODAL -->
+    <div id="success-modal" class="fixed inset-0 z-[200] flex opacity-0 pointer-events-none transition-opacity duration-500 items-center justify-center px-4">
+        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" onclick="closeSuccessModal()"></div>
+        <div class="bg-white p-10 max-w-md w-full text-center rounded-[2rem] shadow-2xl relative z-10 border border-slate-200">
+            <div class="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl border border-green-200">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 id="success-modal-title" class="text-3xl font-black text-slate-900 mb-3">Success!</h3>
+            <p id="success-modal-desc" class="text-slate-500 mb-8 text-lg font-light">Thank you. We have received your details.</p>
+            <button onclick="closeSuccessModal()" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-3.5 px-8 rounded-xl transition-colors w-full text-lg shadow-md">Close</button>
+        </div>
+    </div>
+
+    <!-- FACILITY MODAL -->
+    <div id="facility-modal" class="fixed inset-0 z-[200] flex opacity-0 pointer-events-none transition-opacity duration-500 items-center justify-center">
+        <div class="absolute inset-0 bg-slate-900/90 z-0"></div>
+        <div id="modal-bg-container" class="absolute inset-0 z-1 opacity-30 mix-blend-luminosity"></div>
+        <div class="absolute inset-0 z-10 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent"></div>
+        <button onclick="closeFacilityModal()" class="absolute top-10 right-10 z-50 w-16 h-16 rounded-full bg-white/10 hover:bg-amber-500 text-white hover:text-white transition-all flex items-center justify-center text-2xl border border-white/20 backdrop-blur-md">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <main class="relative z-20 w-full px-8 lg:px-32 flex items-center h-full">
+            <div class="max-w-4xl w-full text-white">
+                <div id="modal-icon" class="inline-flex items-center justify-center w-24 h-24 rounded-[2rem] bg-amber-500/20 text-amber-400 border border-amber-500/30 mb-10 shadow-lg">
+                    <i class="fa-solid fa-desktop text-5xl"></i>
+                </div>
+                <h1 id="modal-title" class="text-6xl md:text-7xl font-black mb-10 drop-shadow-2xl tracking-tight">Facility Title</h1>
+                <div id="modal-desc" class="text-slate-200 font-light leading-relaxed text-2xl md:text-3xl min-h-[300px] typewriter-cursor"></div>
+            </div>
+        </main>
+    </div>
+
+    <!-- 360° INTERACTIVE GALLERY -->
+    <div id="cinematic-gallery" class="fixed inset-0 flex z-[200] opacity-0 pointer-events-none">
+        <div class="absolute top-8 left-0 w-full text-center z-50 pointer-events-none">
+            <h2 class="text-4xl md:text-5xl font-black text-white tracking-tight drop-shadow-md serif-font">Interactive Gallery</h2>
+            <p class="text-amber-400 tracking-[0.2em] text-xs md:text-sm uppercase font-bold mt-2">Swipe or drag to navigate</p>
+        </div>
+        <button onclick="closeCinematicGallery()" class="absolute top-8 right-8 z-50 pointer-events-auto w-12 h-12 md:w-14 md:h-14 rounded-full bg-slate-900 hover:bg-slate-800 text-white transition-colors flex items-center justify-center text-xl shadow-lg border border-slate-700">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="cg-scene" id="cg-scene">
+            <div class="cg-track" id="cg-track"></div>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- LOGIC SCRIPTS                              -->
+    <!-- ========================================== -->
+    <script>
+        // HERO SLIDER
+        let heroIndex = 0;
+        const heroData = [
+            { image: "Hero1.png", title: "Where Learning Feels <br/><span class='text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-amber-500'>Like Joy</span>", subtitle: "Nurturing young minds with academic excellence, creative arts, and fundamental values to build the visionary leaders of tomorrow." },
+            { image: "Hero2.png", title: "Empowering the <br/><span class='text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-amber-500'>Next Generation</span>", subtitle: "Providing state-of-the-art facilities and dedicated corporate mentors to unlock every child's potential." },
+            { image: "Hero3.png", title: "A Tradition of <br/><span class='text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-amber-500'>Excellence</span>", subtitle: "Over 40 years of commitment to holistic education, robust sports, and ethical character building since 1983." }
+        ];
+
+        function createHeroSlider() {
+            const container = document.getElementById('heroSlider');
+            heroData.forEach((slide, i) => {
+                const div = document.createElement('div');
+                div.className = `absolute inset-0 bg-cover bg-center transition-opacity duration-[1500ms] ${i === 0 ? 'opacity-100' : 'opacity-0'}`;
+                div.style.backgroundImage = `url('${slide.image}')`;
+                container.appendChild(div);
+            });
+        }
+
+        function nextHero() {
+            const textContainer = document.getElementById('heroTextContainer');
+            textContainer.classList.remove('opacity-100', 'translate-y-0');
+            textContainer.classList.add('opacity-0', 'translate-y-12');
+            
+            setTimeout(() => {
+                const slides = document.querySelectorAll('#heroSlider > div');
+                if(!slides.length) return;
+                slides[heroIndex].classList.replace('opacity-100', 'opacity-0');
+                heroIndex = (heroIndex + 1) % heroData.length;
+                slides[heroIndex].classList.replace('opacity-0', 'opacity-100');
+                
+                document.getElementById('heroTitle').innerHTML = heroData[heroIndex].title;
+                document.getElementById('heroSubtitle').innerHTML = heroData[heroIndex].subtitle;
+                
+                textContainer.classList.remove('opacity-0', 'translate-y-12');
+                textContainer.classList.add('opacity-100', 'translate-y-0');
+            }, 800); 
+        }
+        setInterval(nextHero, 6000);
+
+        // ABOUT COUNTERS ANIMATION
+        const counters = document.querySelectorAll('.counter');
+        const counterObserverOptions = { root: null, rootMargin: '0px', threshold: 0.2 };
+        
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const counter = entry.target;
+                const target = +counter.getAttribute('data-target');
+                if (entry.isIntersecting) {
+                    let current = 0;
+                    const duration = 2000; 
+                    const increment = target / (duration / 16); 
+                    cancelAnimationFrame(counter.dataset.animationId); 
+                    const updateCounter = () => {
+                        current += increment;
+                        if (current < target) {
+                            counter.innerText = Math.ceil(current);
+                            counter.dataset.animationId = requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+                    updateCounter();
+                } else {
+                    cancelAnimationFrame(counter.dataset.animationId);
+                    counter.innerText = '0';
+                }
+            });
+        }, counterObserverOptions);
+
+        // HIGH-PERFORMANCE GALLERY SCROLL ANIMATION
+        const scrollSection = document.getElementById('gallery-scroll-section');
+        const imgLeft = document.getElementById('scroll-img-left');
+        const imgMid = document.getElementById('scroll-img-mid');
+        const imgRight = document.getElementById('scroll-img-right');
+        const galHeading = document.getElementById('gal-heading');
+        let ticking = false;
+
+        window.addEventListener('scroll', () => {
+            if (!scrollSection) return;
+            const rect = scrollSection.getBoundingClientRect();
+            const scrollRange = rect.height - window.innerHeight;
+            let progress = -rect.top / scrollRange;
+            progress = Math.max(0, Math.min(1, progress));
+
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    galHeading.style.opacity = Math.max(0, 1 - progress * 4);
+                    
+                    const maxScaleX = window.innerWidth / imgMid.offsetWidth;
+                    const maxScaleY = window.innerHeight / imgMid.offsetHeight;
+                    const maxScale = Math.max(maxScaleX, maxScaleY) * 1.1; 
+                    
+                    const scale = 1 + ((maxScale - 1) * progress);
+                    const yOffsetToCenter = (window.innerHeight / 2) - (imgMid.offsetTop + (imgMid.offsetHeight / 2));
+                    const translateY = yOffsetToCenter * progress;
+                    
+                    imgMid.style.transform = `translateY(${translateY}px) scale(${scale})`;
+                    const xMove = progress * 150; 
+                    imgLeft.style.transform = `translate(calc(-${xMove}vw), 0)`;
+                    imgRight.style.transform = `translate(calc(${xMove}vw), 0)`;
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
+
+        // TRUE 360° INWARD-FACING CYLINDRICAL GALLERY
+        const TOTAL_IMAGES = 30;
+        const fullGalleryImages = [];
+        for(let i=1; i<=TOTAL_IMAGES; i++) {
+            fullGalleryImages.push(`Pic${i}.png`);
+        }
+
+        let cgTargetAngle = 0, cgCurrentAngle = 0, cgRadius = 0;
+        let isCgDragging = false, cgStartX = 0, cgReqFrame, isGalleryOpen = false; 
+
+        function openCinematicGallery() {
+            isGalleryOpen = true;
+            const container = document.getElementById('cinematic-gallery');
+            container.classList.remove('hidden');
+            container.classList.add('flex');
+            void container.offsetWidth; 
+            container.classList.remove('opacity-0', 'pointer-events-none');
+            container.classList.add('opacity-100', 'pointer-events-auto');
+            document.body.style.overflow = 'hidden'; 
+            buildTrue3DCarousel();
+            cgTargetAngle = 0; cgCurrentAngle = 0;
+            if(cgReqFrame) cancelAnimationFrame(cgReqFrame);
+            cgReqFrame = requestAnimationFrame(animateTrue3DCarousel);
+        }
+
+        function closeCinematicGallery() {
+            isGalleryOpen = false;
+            const container = document.getElementById('cinematic-gallery');
+            container.classList.remove('opacity-100', 'pointer-events-auto');
+            container.classList.add('opacity-0', 'pointer-events-none');
+            setTimeout(() => {
+                container.classList.add('hidden');
+                container.classList.remove('flex');
+                document.body.style.overflow = '';
+                cancelAnimationFrame(cgReqFrame);
+                document.getElementById('cg-track').innerHTML = ''; 
+            }, 700); 
+        }
+
+        function buildTrue3DCarousel() {
+            const track = document.getElementById('cg-track');
+            track.innerHTML = '';
+            const isMobile = window.innerWidth < 768;
+            const itemWidth = isMobile ? window.innerWidth * 0.45 : Math.min(window.innerWidth * 0.24, 320); 
+            cgRadius = Math.round((itemWidth / 2) / Math.tan(Math.PI / TOTAL_IMAGES)) + 20;
+
+            fullGalleryImages.forEach((imgSrc, i) => {
+                const panel = document.createElement('div');
+                panel.className = 'cg-item';
+                const angle = i * (360 / TOTAL_IMAGES);
+                panel.style.transform = `translate(-50%, -50%) rotateY(${angle}deg) translateZ(${-cgRadius}px)`;
+                panel.onclick = () => { cgTargetAngle = angle; };
+                const imgWrap = document.createElement('div');
+                imgWrap.className = 'cg-img-wrapper';
+                const img = document.createElement('img');
+                img.src = imgSrc;
+                img.loading = "lazy";
+                img.onerror = function() { this.onerror=null; this.src=''; this.parentElement.style.backgroundColor = '#e2e8f0'; };
+                imgWrap.appendChild(img);
+                panel.appendChild(imgWrap);
+                track.appendChild(panel);
+            });
+            track.style.transform = `translateZ(${cgRadius}px) rotateY(0deg)`;
+        }
+
+        const cgScene = document.getElementById('cinematic-gallery');
+        cgScene.addEventListener('mousedown', (e) => { isCgDragging = true; cgStartX = e.clientX; });
+        cgScene.addEventListener('touchstart', (e) => { isCgDragging = true; cgStartX = e.touches[0].clientX; }, {passive: true});
+        window.addEventListener('mouseup', () => { isCgDragging = false; });
+        window.addEventListener('touchend', () => { isCgDragging = false; });
+        window.addEventListener('mousemove', (e) => {
+            if(!isCgDragging) return;
+            cgTargetAngle += (e.clientX - cgStartX) * 0.15; 
+            cgStartX = e.clientX;
+        });
+        window.addEventListener('touchmove', (e) => {
+            if(!isCgDragging) return;
+            cgTargetAngle += (e.touches[0].clientX - cgStartX) * 0.2; 
+            cgStartX = e.touches[0].clientX;
+        }, {passive: true});
+        cgScene.addEventListener('wheel', (e) => { cgTargetAngle -= (e.deltaY + e.deltaX) * 0.05; }, {passive: true});
+
+        function animateTrue3DCarousel() {
+            if (!isGalleryOpen) return; 
+            if (!isCgDragging) cgTargetAngle -= 0.1;
+            cgCurrentAngle += (cgTargetAngle - cgCurrentAngle) * 0.08;
+            const track = document.getElementById('cg-track');
+            track.style.transform = `translateZ(${cgRadius}px) rotateY(${-cgCurrentAngle}deg)`;
+            const items = document.querySelectorAll('.cg-item');
+            items.forEach((item, i) => {
+                const angle = i * (360 / TOTAL_IMAGES);
+                let diff = angle - cgCurrentAngle;
+                diff = ((diff % 360) + 360) % 360;
+                if (diff > 180) diff -= 360;
+                const absDiff = Math.abs(diff);
+                if (absDiff < 10) item.classList.add('is-active');
+                else item.classList.remove('is-active');
+                if (absDiff > 70) {
+                    item.style.opacity = 0;
+                    item.style.pointerEvents = 'none';
+                } else {
+                    item.style.opacity = 1 - Math.pow(absDiff / 70, 3);
+                    item.style.pointerEvents = 'auto';
+                }
+            });
+            cgReqFrame = requestAnimationFrame(animateTrue3DCarousel);
+        }
+
+        // PARENTS REVIEW (SLIDER WITH DOTS)
+        const parentsData = [
+            { name: "Nirankar Mamtha", role: "Business woman", quote: "The school has completely transformed my child's approach to learning. The tech curriculum is outstanding." },
+            { name: "Khaja Moinuddin Shaik", role: "Operations Manager in Insurance Sector", quote: "A safe, nurturing environment focusing on academics and extracurriculars. We couldn't be happier." },
+            { name: "Shaik Subhani Basha", role: "Engineer", quote: "The global leadership program gave my daughter incredible confidence. Highly recommended!" },
+            { name: "Syed sajjad hussain", role: "Graphics designing", quote: "I appreciate the beautiful creative spaces provided for students to express themselves." },
+            { name: "Kamsanplly Madhavi", role: "Nacto trust tuition teacher", quote: "The faculty is dedicated, approachable, and the curriculum is truly future-ready." },
+            { name: "Anoop Ashok", role: "Journalist", quote: "They focus on holistic development, not just textbooks. The facilities are truly impressive." }
+        ];
+
+        let currentReviewIndex = 0;
+        let reviewInterval;
+
+        function buildReviewSlider() {
+            const container = document.getElementById('testimonial-slider-container');
+            container.innerHTML = '';
+            parentsData.forEach((parent, i) => {
+                const avatarNum = i + 1;
+                const slide = document.createElement('div');
+                slide.className = `testimonial-slide absolute inset-0 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 px-4 md:px-12 w-full transition-all duration-700`;
+                slide.style.opacity = i === 0 ? '1' : '0';
+                slide.style.zIndex = i === 0 ? '10' : '0';
+                slide.style.transform = i === 0 ? 'translateX(0)' : 'translateX(50px)';
+                slide.innerHTML = `
+                    <div class="w-full md:w-1/3 flex justify-center md:justify-end">
+                        <img src="parent${avatarNum}.jpg" loading="lazy" class="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-amber-500 object-cover shadow-[0_0_40px_rgba(245,158,11,0.2)] bg-slate-800" onerror="this.onerror=null; this.src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png';">
+                    </div>
+                    <div class="w-full md:w-2/3 text-center md:text-left">
+                        <i class="fa-solid fa-quote-left text-5xl text-amber-500/50 mb-6 block"></i>
+                        <p class="text-xl md:text-3xl text-slate-200 font-light leading-relaxed mb-6">"${parent.quote}"</p>
+                        <h4 class="font-bold text-3xl text-white mb-2">${parent.name}</h4>
+                        <p class="text-amber-500 text-sm tracking-widest uppercase font-bold">${parent.role}</p>
+                    </div>
+                `;
+                container.appendChild(slide);
+            });
+
+            const dotsContainer = document.getElementById('testimonial-dots-container');
+            dotsContainer.innerHTML = '';
+            parentsData.forEach((_, i) => {
+                const dot = document.createElement('button');
+                dot.className = `w-3 h-3 rounded-full transition-all duration-300 ${i === 0 ? 'bg-amber-500 scale-125' : 'bg-white/30 hover:bg-white/50'}`;
+                dot.onclick = () => {
+                    currentReviewIndex = i;
+                    showTestimonial(currentReviewIndex);
+                    resetReviewTimer();
+                };
+                dotsContainer.appendChild(dot);
+            });
+            startReviewSlider();
+        }
+
+        function showTestimonial(index) {
+            const slides = document.querySelectorAll('.testimonial-slide');
+            slides.forEach((s, i) => {
+                s.style.opacity = i === index ? '1' : '0';
+                s.style.zIndex = i === index ? '10' : '0';
+                s.style.transform = i === index ? 'translateX(0)' : 'translateX(50px)';
+            });
+            const dots = document.getElementById('testimonial-dots-container').children;
+            Array.from(dots).forEach((dot, i) => {
+                dot.className = `w-3 h-3 rounded-full transition-all duration-300 ${i === index ? 'bg-amber-500 scale-125' : 'bg-white/30 hover:bg-white/50'}`;
+            });
+        }
+
+        function nextTestimonial() {
+            currentReviewIndex = (currentReviewIndex + 1) % parentsData.length;
+            showTestimonial(currentReviewIndex);
+        }
+
+        function startReviewSlider() { reviewInterval = setInterval(nextTestimonial, 5000); }
+        function resetReviewTimer() { clearInterval(reviewInterval); startReviewSlider(); }
+
+        // TYPEWRITER MODAL 
+        const modalData = {
+            computerScience: { title: "Computer Science", icon: "fa-laptop-code", paragraphs: ["Dive deep into coding, artificial intelligence, and computational logic with state-of-the-art labs."], images: ['Cir1.png'] },
+            library: { title: "Library", icon: "fa-book-open", paragraphs: ["A vast collection of resources and interactive digital archives to foster a lifelong love for reading."], images: ['Cir2.png'] },
+            laboratory: { title: "Laboratory", icon: "fa-flask", paragraphs: ["Hands-on scientific exploration and advanced research facilities for Physics, Chemistry, and Biology."], images: ['Cir3.png'] },
+            cultural: { title: "Cultural Programme", icon: "fa-masks-theater", paragraphs: ["Empowering expression through arts, drama, dance, and music to build holistic, confident leaders."], images: ['Cir4.png'] },
+            
+            painting: { title: "Painting", icon: "fa-palette", paragraphs: ["A creative sanctuary for visual arts and expression."], images: ['Fac1.png'] },
+            martialArts: { title: "Martial Arts", icon: "fa-user-ninja", paragraphs: ["Building discipline, focus, and physical strength through structured training."], images: ['Fac2.png'] },
+            volleyball: { title: "Volley Ball", icon: "fa-volleyball", paragraphs: ["Professional courts for teamwork and athletic excellence."], images: ['Fac3.png'] },
+            mehandi: { title: "Mehandi Design", icon: "fa-hand-sparkles", paragraphs: ["Celebrating traditional arts and intricate cultural designs."], images: ['Fac4.png'] },
+            indoorGames: { title: "Indoor Games", icon: "fa-chess-board", paragraphs: ["Strategic thinking through chess, carrom, and other board games."], images: ['Fac5.png'] }
+        };
+
+        let typeTimeout;
+        function openFacilityModal(id) {
+            const data = modalData[id];
+            if(!data) return;
+            clearTimeout(typeTimeout);
+            const descContainer = document.getElementById('modal-desc');
+            descContainer.innerHTML = ''; 
+            document.getElementById('modal-title').innerText = data.title;
+            document.getElementById('modal-icon').innerHTML = `<i class="fa-solid ${data.icon} text-4xl"></i>`;
+
+            const bgContainer = document.getElementById('modal-bg-container');
+            bgContainer.innerHTML = '';
+            data.images.forEach((imgSrc, index) => {
+                const div = document.createElement('div');
+                div.className = `modal-bg-slide ${index === 0 ? 'opacity-100' : 'opacity-0'}`;
+                div.style.backgroundImage = `url('${imgSrc}')`;
+                bgContainer.appendChild(div);
+            });
+            
+            const modal = document.getElementById('facility-modal');
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modal.classList.add('opacity-100', 'pointer-events-auto');
+            
+            let pIndex = 0, cIndex = 0;
+            let currentParagraph = document.createElement('p');
+            currentParagraph.className = "mb-6";
+            descContainer.appendChild(currentParagraph);
+            function typeWriter() {
+                if (pIndex < data.paragraphs.length) {
+                    if (cIndex < data.paragraphs[pIndex].length) {
+                        currentParagraph.innerHTML += data.paragraphs[pIndex].charAt(cIndex);
+                        cIndex++;
+                        typeTimeout = setTimeout(typeWriter, 12); 
+                    } else {
+                        pIndex++; cIndex = 0;
+                        if (pIndex < data.paragraphs.length) {
+                            currentParagraph = document.createElement('p');
+                            currentParagraph.className = "mb-6";
+                            descContainer.appendChild(currentParagraph);
+                            typeTimeout = setTimeout(typeWriter, 300); 
+                        } else { descContainer.classList.remove('typewriter-cursor'); }
+                    }
+                }
+            }
+            descContainer.classList.add('typewriter-cursor');
+            typeTimeout = setTimeout(typeWriter, 400); 
+        }
+
+        function closeFacilityModal() {
+            const modal = document.getElementById('facility-modal');
+            modal.classList.remove('opacity-100', 'pointer-events-auto');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            clearTimeout(typeTimeout); 
+        }
+
+        // SUCCESS MODAL CLOSE
+        function closeSuccessModal() { 
+            const modal = document.getElementById('success-modal');
+            modal.classList.remove('opacity-100', 'pointer-events-auto');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => { 
+            createHeroSlider(); 
+            buildReviewSlider();
+            counters.forEach(counter => counterObserver.observe(counter));
+            
+            // FEEDBACK FORM LOGIC
+            const feedbackForm = document.getElementById('feedbackForm');
+            if(feedbackForm) {
+                const submitBtn = document.getElementById('submitBtn');
+                const submitText = document.getElementById('submitText');
+                const submitIcon = document.getElementById('submitIcon');
+
+                feedbackForm.addEventListener('submit', async function(e) {
+                    e.preventDefault(); 
+                    const data = new FormData(this);
+                    
+                    submitBtn.classList.add('cursor-not-allowed', 'opacity-80');
+                    submitText.innerText = 'Submitting...';
+                    submitIcon.className = 'fa-solid fa-spinner fa-spin';
+
+                    try {
+                        await fetch(this.action, { method: this.method, body: data, headers: { 'Accept': 'application/json' } });
+                        const modal = document.getElementById('success-modal');
+                        document.getElementById('success-modal-title').innerText = "Feedback Submitted!";
+                        document.getElementById('success-modal-desc').innerText = "Thank you for your valuable feedback. Our team will review it shortly.";
+                        
+                        modal.classList.remove('opacity-0', 'pointer-events-none');
+                        modal.classList.add('opacity-100', 'pointer-events-auto');
+                        this.reset(); 
+                    } catch (error) {
+                        alert("There was an error submitting your form.");
+                    } finally {
+                        submitBtn.classList.remove('cursor-not-allowed', 'opacity-80');
+                        submitText.innerText = 'Submit Feedback';
+                        submitIcon.className = 'fa-solid fa-paper-plane';
+                    }
+                });
+            }
+
+            // ADMISSION FORM LOGIC
+            const admissionForm = document.getElementById('admissionForm');
+            if(admissionForm) {
+                const admSubmitBtn = document.getElementById('admSubmitBtn');
+                const admSubmitText = document.getElementById('admSubmitText');
+                const admSubmitIcon = document.getElementById('admSubmitIcon');
+
+                admissionForm.addEventListener('submit', async function(e) {
+                    e.preventDefault(); 
+                    const data = new FormData(this);
+                    
+                    admSubmitBtn.classList.add('cursor-not-allowed', 'opacity-80');
+                    admSubmitText.innerText = 'Submitting...';
+                    admSubmitIcon.className = 'fa-solid fa-spinner fa-spin';
+
+                    try {
+                        await fetch(this.action, { method: this.method, body: data, headers: { 'Accept': 'application/json' } });
+                        const modal = document.getElementById('success-modal');
+                        document.getElementById('success-modal-title').innerText = "Application Received!";
+                        document.getElementById('success-modal-desc').innerText = "Thank you. Our admissions team will contact you shortly.";
+                        
+                        modal.classList.remove('opacity-0', 'pointer-events-none');
+                        modal.classList.add('opacity-100', 'pointer-events-auto');
+                        this.reset(); 
+                    } catch (error) {
+                        alert("There was an error submitting your form.");
+                    } finally {
+                        admSubmitBtn.classList.remove('cursor-not-allowed', 'opacity-80');
+                        admSubmitText.innerText = 'Submit Application';
+                        admSubmitIcon.className = 'fa-solid fa-paper-plane';
+                    }
+                });
+            }
+            
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    closeCinematicGallery();
+                    closeFacilityModal();
+                    closeSuccessModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
